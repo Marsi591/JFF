@@ -1,13 +1,31 @@
+Here is an example index.html file with an associated style.css file that creates a more visually appealing layout with five buttons:
+
+index.html:
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>My Flask App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Welcome to my Flask App</h1>
-    <form action="/run_script" method="POST">
-        <input type="submit" name="script_name" value="script1">
-        <input type="submit" name="script_name" value="script2">
-    </form>
+    <div class="button-container">
+        <form action="/run_script" method="POST">
+            <button type="submit" name="script_name" value="script1">Script 1</button>
+        </form>
+        <form action="/run_script" method="POST">
+            <button type="submit" name="script_name" value="script2">Script 2</button>
+        </form>
+        <form action="/run_script" method="POST">
+            <button type="submit" name="script_name" value="script3">Script 3</button>
+        </form>
+        <form action="/run_script" method="POST">
+            <button type="submit" name="script_name" value="script4">Script 4</button>
+        </form>
+        <form action="/run_script" method="POST">
+            <button type="submit" name="script_name" value="script5">Script 5</button>
+        </form>
+    </div>
 </body>
 </html>
